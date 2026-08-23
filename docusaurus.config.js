@@ -23,7 +23,8 @@ const config = {
   url: 'https://jasonnovich-dev.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docusaurus-sample/',
+  // PREVIEW_BASE_URL lets PR preview builds serve from a pr-preview/pr-<n>/ subpath
+  baseUrl: process.env.PREVIEW_BASE_URL || '/docusaurus-sample/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
