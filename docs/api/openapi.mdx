@@ -1,0 +1,19 @@
+---
+title: Openapi
+sidebar_label: Openapi
+hide_table_of_contents: true
+---
+
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import './openapi.css';
+
+# Openapi
+
+<BrowserOnly fallback={<div>Loading API reference...</div>}>
+  {() => {
+    const { RedocStandalone } = require('redoc');
+    const specUrl = useBaseUrl('/openapi/openapi.yaml');
+    return <RedocStandalone specUrl={specUrl} options={{"typography":{"fontFamily":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif","headings":{"fontFamily":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif","fontWeight":"600"},"code":{"fontFamily":"'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"}},"colors":{"primary":{"main":"#32329f"}}}} />;
+  }}
+</BrowserOnly>
