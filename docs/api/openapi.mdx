@@ -1,0 +1,16 @@
+---
+title: Openapi
+sidebar_label: Openapi
+hide_table_of_contents: true
+---
+
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
+# Openapi
+
+<BrowserOnly fallback={<div>Loading API reference...</div>}>
+  {() => {
+    const { RedocStandalone } = require('redoc');
+    return <RedocStandalone specUrl="/openapi/openapi.yaml" />;
+  }}
+</BrowserOnly>
