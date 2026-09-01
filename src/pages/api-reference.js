@@ -10,7 +10,7 @@ function ApiReference() {
         return (
           <div style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem 1rem' }}>
             <RedocStandalone
-              specUrl="/docusaurus-sample/openapi/openapi.bundle.json"
+              specUrl="/docusaurus-sample/openapi/openapi.yaml"
               options={{
                 theme: {
                   colors: {
