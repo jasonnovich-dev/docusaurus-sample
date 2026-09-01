@@ -1,0 +1,24 @@
+/* Styling for the Docusaurus page chrome surrounding an embedded
+ * RedocStandalone component (the OAS spec viewer). Redoc's own look --
+ * colors, fonts, code blocks -- is controlled separately by the
+ * options.theme object in redoc-theme.json; it does not accept an
+ * external stylesheet. This file is for anything outside that embed:
+ * the page container, margins, and interaction with Docusaurus's own
+ * layout (navbar, sidebar, dark mode).
+ *
+ * This starts empty (no overrides beyond Docusaurus/Redoc defaults) --
+ * add rules here only as a customer's deployment actually needs them.
+ */
+
+/* Example: give the Redoc embed room to breathe from the Docusaurus navbar.
+.redoc-page-container {
+  padding-top: 1rem;
+}
+*/
+
+/* Example: let Redoc's own dark-mode-unaware theme sit correctly inside
+ * Docusaurus's dark mode by scoping to Docusaurus's data-theme attribute.
+[data-theme='dark'] .redoc-page-container {
+  background-color: var(--ifm-background-color);
+}
+*/
