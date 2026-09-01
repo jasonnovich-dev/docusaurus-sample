@@ -1,7 +1,10 @@
 import React from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function ApiReference() {
+  const specUrl = useBaseUrl('/openapi/openapi.yaml');
+
   return (
     <BrowserOnly fallback={<div>Loading API reference…</div>}>
       {() => {
@@ -10,7 +13,7 @@ function ApiReference() {
         return (
           <div style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem 1rem' }}>
             <RedocStandalone
-              specUrl="/docusaurus-sample/openapi/openapi.bundle.json"
+              specUrl={specUrl}
               options={{
                 theme: {
                   colors: {
