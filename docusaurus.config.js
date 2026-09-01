@@ -153,6 +153,17 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['bash', 'json', 'yaml', 'http'],
+        magicComments: [
+          {
+            className: 'theme-code-block-highlighted-line',
+            line: 'highlight-next-line',
+            block: {
+              start: 'highlight-start',
+              end: 'highlight-end',
+            },
+          },
+        ],
       },
     }),
 };
